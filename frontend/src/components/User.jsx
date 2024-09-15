@@ -1,18 +1,7 @@
-import axios from 'axios'
-import React from 'react'
-import toast from 'react-hot-toast'
+
 import {Link} from "react-router-dom"
-const User = ({ user, index }) => {
-    const handleDeleteUser = async(userId) =>{
-        const res = await axios.delete(`${import.meta.env.VITE_SERVER_URL}/delete/${userId}`)
-        
-        if(res.status===200){
-            toast.success(res.data.message)
-        }else{
-            toast.error(res.data.message)
-        }
-       
-    }
+const User = ({ user, index ,handleDeleteUser}) => {
+    
     return (
         <>
             <tr>

@@ -57,6 +57,8 @@ const updateUser = async(req,res) =>{
 
         const {name,phone} = req.body;
 
+        
+
         const user = await User.findByIdAndUpdate(userId,{
             name,
             phone
